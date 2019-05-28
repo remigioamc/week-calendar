@@ -1,11 +1,11 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'stencil-starter-project-name',
+  namespace: 'week-calendar-app',
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader'
+      esmLoaderPath: '../loader',
     },
     {
       type: 'docs-readme'
@@ -14,5 +14,8 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null // disable service workers
     }
+  ],
+  copy: [
+    { src: 'global' }
   ]
 };

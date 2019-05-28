@@ -1,7 +1,7 @@
 {
-  "name": "stencil-starter-project-name",
-  "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "name": "week-calendar",
+  "version": "0.0.7",
+  "description": "Web component Calendar for selecting an available date displaying only a week at a time",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-starter-project-name/stencil-starter-project-name.js",
+  "unpkg": "dist/week-calendar/week-calendar.js",
   "files": [
     "dist/",
     "loader/"

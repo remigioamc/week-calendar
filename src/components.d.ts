@@ -9,40 +9,46 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface DayCard {
+    'day': Date;
+    'disable': boolean;
+    'locale': string;
+    'selected': boolean;
+  }
+  interface WeekCalendar {
+    'blockBefore': boolean;
+    'disableDates': string;
+    'disableWeekends': boolean;
+    'enableDates': string;
+    'locale': string;
+    'selectedDay': any;
+    'startDate': any;
+    'startDay': number;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent extends JSXBase.HTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface DayCard extends JSXBase.HTMLAttributes {
+    'day'?: Date;
+    'disable'?: boolean;
+    'locale'?: string;
+    'selected'?: boolean;
+  }
+  interface WeekCalendar extends JSXBase.HTMLAttributes {
+    'blockBefore'?: boolean;
+    'disableDates'?: string;
+    'disableWeekends'?: boolean;
+    'enableDates'?: string;
+    'locale'?: string;
+    'onValueUpdated'?: (event: CustomEvent<any>) => void;
+    'selectedDay'?: any;
+    'startDate'?: any;
+    'startDay'?: number;
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'day-card': DayCard;
+    'week-calendar': WeekCalendar;
   }
 }
 
@@ -60,14 +66,21 @@ declare global {
 
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLDayCardElement extends Components.DayCard, HTMLStencilElement {}
+  var HTMLDayCardElement: {
+    prototype: HTMLDayCardElement;
+    new (): HTMLDayCardElement;
+  };
+
+  interface HTMLWeekCalendarElement extends Components.WeekCalendar, HTMLStencilElement {}
+  var HTMLWeekCalendarElement: {
+    prototype: HTMLWeekCalendarElement;
+    new (): HTMLWeekCalendarElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'day-card': HTMLDayCardElement;
+    'week-calendar': HTMLWeekCalendarElement;
   }
 
   interface ElementTagNameMap extends HTMLElementTagNameMap {}
