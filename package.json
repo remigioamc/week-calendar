@@ -1,6 +1,6 @@
 {
   "name": "week-calendar",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Web component Calendar for selecting an available date displaying only a week at a time",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,6 +10,7 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/week-calendar/week-calendar.js",
+  "repository": "github:remigioamc/week-calendar",
   "files": [
     "dist/",
     "loader/"
